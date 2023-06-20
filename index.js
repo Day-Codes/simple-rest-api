@@ -12,8 +12,13 @@ const app = express();
 //});
 //app.get("/ok", (req, res) => {
 
-
-
+app.get("/demo", (req, res) => {
+const items = [
+"Easy","Code"
+ ];
+const item = Math.floor(Math.random() * items.length);
+ res.json({result: items[item] });
+});
 app.get("/", (req, res) => {
   
 
